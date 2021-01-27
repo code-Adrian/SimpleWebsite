@@ -1,0 +1,136 @@
+.ui.structured.table {
+  border-collapse: collapse;
+  font-size: 1.6em;
+}
+	
+
+.ui.structured.table thead th {
+  border-left: none;
+  border-right: none;
+  background-color: black;
+	color: white;
+	
+}
+	
+
+#Days1 {
+  background: #32e38a;
+}
+#Days2 {
+  background: #32e38a;
+}
+#Days3 {
+  background: #32e38a;
+}
+#Days4 {
+  background: #32e38a;
+}
+#Days5 {
+  background: #32e38a;
+}
+#ClassesTimeLocation1{
+	  background: #8de3b7
+}
+#ClassesTimeLocation2{
+	  background: #8de3b7
+}
+#ClassesTimeLocation3{
+	  background: #8de3b7
+}
+#ClassesTimeLocation4{
+	  background: #8de3b7
+}
+#ClassesTimeLocation5{
+	  background: #8de3b7
+}
+#ClassesTimeLocation6{
+	  background: #8de3b7
+}
+#ClassesTimeLocation7{
+	  background: #8de3b7
+}
+#ClassesTimeLocation8{
+	  background: #8de3b7
+}
+#ClassesTimeLocation9{
+	  background: #8de3b7
+}
+#ClassesTimeLocation10{
+	  background: #8de3b7
+}
+#ClassesTimeLocation11{
+	  background: #8de3b7
+}
+#ClassesTimeLocation12{
+	  background: #8de3b7
+}
+#ClassesTimeLocation13{
+	  background: #8de3b7
+}
+#ClassesTimeLocation14{
+	  background: #8de3b7
+}
+#ClassesTimeLocation15{
+	  background: #8de3b7
+}
+#ClassesTimeLocation16{
+	  background: #8de3b7
+}
+#ClassesTimeLocation17{
+	  background: #8de3b7
+}
+#ClassesTimeLocation18{
+	  background: #8de3b7
+}
+#ClassesTimeLocation19{
+	  background: #8de3b7
+}
+#ClassesTimeLocation20{
+	  background: #8de3b7
+}
+#ClassesTimeLocation21{
+	  background: #8de3b7
+}
+#ClassesTimeLocation22{
+	  background: #8de3b7
+}
+#ClassesTimeLocation23{
+	  background: #8de3b7
+}
+#ClassesTimeLocation24{
+	  background: #8de3b7
+}
+
+
+td:hover{
+	color: green;
+	
+}
+.ui.structured.table thead th:hover {
+ 	color:blue;
+	
+}
+
+.headerFORM{
+	margin-left: 40%;
+	
+}
+
+#LabelTEXT{
+	margin-left:11em;
+	color: black;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+
+#add{
+	margin-left: 40%;
+	margin-bottom: 1em;
+}
+
+
+#button{
+	margin-top: 1em;
+	margin-left: 35%
+}

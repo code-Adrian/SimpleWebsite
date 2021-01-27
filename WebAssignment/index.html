@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>Web Assignment</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<link rel="stylesheet"  href="css/css.css">
+<link rel="stylesheet"  href="css/tabslide.css">
+
+</head>
+<body >
+<Header>
+
+
+<div id = "topPush">
+</div>
+  
+
+  
+
+	  <div id = "Header">
+	  <div class ="ui centered aligned container">
+  <div class="center aligned column">
+<nav class="ui five item menu">
+  <a href="index.html"  class="item">Home</a>
+  <a href="Timetable.html" class="item">Timetable</a>
+  <a href="Gallery.html" class="item">Gallery</a>
+  <a href="about.html" class="item">About</a>
+  <a href="Register.html" class="item">Register</a>
+ 
+ </nav>
+   </div>
+   </div>
+ </div>
+</Header>
+<Main>
+  <div id = "ghost" class ="ui grid">
+ <div class = "ui stackable two column row">
+ <div id="mainleft">
+ <div class = " ui column">
+ <h2>====== Activities =======</h2>
+<hr>
+<p>Welcome to SportClub Website!<br>Our website is made for everyone<br>to enjoy,we provide activities and<br>training for every sport listed on<br>our website. Please get fimiliar<br>
+with the sports listed and get<br> started right away!
+</p>
+<hr>
+<h3>American Football</h3>
+
+<hr>
+
+<h3>Soccer</h3>
+
+<hr>
+
+<h3>Baseball</h3>
+
+<hr>
+
+<h3>Badminton</h3>
+
+<hr>
+
+<h3>Cycling</h3>
+
+<hr>
+
+<h3>Archery</h3>
+
+<hr>
+
+<h3>Running</h3>
+
+<hr>
+
+<h3>Karate</h3>
+
+<hr>
+
+<h3>Volleyball</h3>
+
+<hr>
+<h3>Table Tennis</h3>
+<hr>
+ </div>
+ </div>
+
+ <div class = "ui eleven wide column">
+   <div id="mainright">
+
+ <p class = "textmiddle">Types of Courses</p>
+<h3 class = "textmiddle">Types:</h3>
+ 
+ <figure class ="ui medium left floated image">
+ <img   src="images/football.png">
+ <figcaption>American football</figcaption>
+</figure>
+
+ 
+  <figure class ="ui medium left floated image">
+ <img   src="images/soccer.png">
+ <figcaption>Soccer</figcaption>
+</figure>
+
+ 
+   <figure class ="ui medium left floated image">
+ <img   src="images/baseball.png">
+ <figcaption>Baseball</figcaption>
+</figure>
+ 
+
+   <figure class ="ui medium left floated image">
+ <img   src="images/badminton.png">
+ <figcaption>Badminton</figcaption>
+</figure>
+
+ 
+  <figure class ="ui medium image">
+ <img   src="images/cycling.png">
+ <figcaption>Cycling</figcaption>
+</figure>
+
+ 
+   <figure class ="ui medium image">
+ <img   src="images/archery.png">
+ <figcaption>Archery</figcaption>
+</figure>
+
+ 
+ <figure class ="ui medium image">
+ <img   src="images/running.png">
+ <figcaption>Running</figcaption>
+</figure>
+ 
+ 
+ <figure class ="ui medium image">
+ <img   src="images/karate.png">
+ <figcaption>Karate</figcaption>
+</figure>
+ 
+ 
+  <figure class ="ui medium left floated image">
+ <img   src="images/table-tennis.png">
+ <figcaption>table-Tennis</figcaption>
+</figure>
+ </div>
+ </div>
+
+ </div>
+</div>
+
+</Main>
+<Footer>
+
+    <div class="slide-out-div">
+        <a class="handle" href="http://link-for-non-js-users">Content</a>
+        <h3>Contact me</h3>
+        <a href="20088308@gmail.com">20088308@mail.wit.ie</a><br /><br />
+        <p>Thanks you for visiting our website.</p>
+        <p>If you would like to send some feedback or questions about<br> the website please email to the email provided</p>
+    </div>
+
+
+
+
+</Footer>
+
+<script src="js/jquery.lightMouse.js"></script>
+<script src="js/jquery.tabslide.js"></script>
+
+
+
+
+    <script>
+         $(function(){
+             $('.slide-out-div').tabSlideOut({
+                 tabHandle: '.handle',                              //class of the element that will be your tab
+                 pathToTabImage: 'images/contact_tab.gif',          //path to the image for the tab (optionaly can be set using css)
+                 imageHeight: '122px',                               //height of tab image
+                 imageWidth: '40px',                               //width of tab image    
+                 tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
+                 speed: 650,                                        //speed of animation
+                 action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+                 topPos: '200px',                                   //position from the top
+                 fixedPosition: true                           //options: true makes it stick(fixed position) on scroll
+             });
+         });
+		 
+		 
+
+
+         </script>
+
+
+
+
+
+
+
+
+	<script>
+
+	$('#ghost').lightMouse({
+
+	couleur:'#FFFFFF'
+
+	});
+
+	</script>
+
+
+
+</body>
+
+
+

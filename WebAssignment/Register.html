@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+<title>Web Assignment</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+<link rel="stylesheet"  href="css/css.css">
+
+<style>
+body{
+  background-image: url('images/register.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+</style>
+
+
+
+<br>
+<br>
+<br>
+
+
+	  <div id = "Header">
+	  <div class ="ui centered aligned container">
+  <div class="center aligned column">
+<nav class="ui five item menu">
+  <a href="index.html"  class="item">Courses</a>
+  <a href="Timetable.html" class="item">Timetable</a>
+  <a href="Gallery.html" class="item">Gallery</a>
+   <a href="about.html" class="item">About</a>
+  <a href="Register.html" class="item">Register</a>
+ </nav>
+   </div>
+   </div>
+ </div>
+ 
+  
+  
+ 
+ <div class = " ui centered grid" style = "margin-left: 5em;">
+  <div id="register">
+
+ <p>Register now !</p>
+
+
+<div class="ui form segment">
+
+<form action="process.html" method="get" id = "contact" class="ui form">
+
+  <div class="two fields">
+    <div class="inline field">
+      <label for="contactname">First Name</label> 
+      <input placeholder="First Name" type="text" name="name"  data-h5-errorid="invalid-name"
+             pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?" autofocus
+              title="Please enter the First name with the first letter capatilised " required>
+       <div id="invalid-name" class="ui-state-error"></div>
+    </div>
+	
+
+    <div class="field">
+      <label>Last Name</label>
+      <input placeholder="Last Name" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)*" data-h5-errorid="invalid-surname" title="Please enter the Surname with the first letter capatilised" type="text" >
+	  	  <div id = "invalid-surname" class="ui-state-error"></div>
+    </div>
+  </div>
+  <div class="field">
+    <label for="contactname">Email Address</label>
+    <input placeholder="myemail@gmail.com" name="contactname" required data-h5-errorid="invalid-email" title="Please enter appropriate email format. (small letters)" pattern = "^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" type="text">
+	<div id = "invalid-email" class="ui-state-error"></div>
+  </div>
+  <div class="field">
+    <label for="contactname">Username</label>
+    <input placeholder="Username" required type="text">
+  </div>
+  <div class="field">
+    <label for="contactname">Password</label>
+    <input type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$" required data-h5-errorid="invalid-password" title="Password must contain atleast 1 big letter and a number">
+	<div id = "invalid-password" class="ui-state-error"></div>
+  </div>
+ <div class="two fields">
+
+ 
+     <div  class="field">
+      <label>Year of Birth</label>
+      <input placeholder="Last Name"  id = "yob"  required pattern = "\d{1,4}" data-h5-errorid="invalid-YearOfBirth" title="Please enter appropriate year of birth." type="number" >
+	  	  <div id = "invalid-YearOfBirth" class="ui-state-error"></div>
+    </div>
+ 
+      <div  class="field">
+      <label>Current Year</label>
+      <input id = "CY" placeholder="Last Name" required pattern = "\d{1,4}" data-h5-errorid="invalid-Year" title="Please enter appropriate current year." type="number" >
+	  	  <div id = "invalid-Year" class="ui-state-error"></div>
+    </div>
+ 
+
+  </div>
+  <div id = "Signup" class="ui submit button">Sign Up Now!</div>
+  </form>
+</div>
+</div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/h5Validate/0.9.0/jquery.h5validate.min.js"></script>
+
+
+
+<script>
+	  $('form').h5Validate();
+	
+  $('form').h5Validate({errorClass:'validationError' });
+</script>
+
+
+
+
+
+<script>
+
+
+$(document).ready(function () {
+
+  
+  
+  $('#Signup').click(function() {
+  
+var Birth = document.getElementById("yob").value;
+var Cyear = document.getElementById("CY").value;
+
+var agecalc = parseFloat(Cyear)-parseFloat(Birth);
+  
+  
+if(agecalc == 18 || agecalc > 18){
+alert("Thank you for signing up!");
+
+
+}else if(agecalc < 18){
+alert("You must be 18 years of age to signup.");
+}
+  
+  
+  
+});
+
+});
+</script>
+
+</html>
+
+

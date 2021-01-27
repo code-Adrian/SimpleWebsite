@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>Web Assignment</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+<link rel="stylesheet"  href="css/css.css">
+<link rel="stylesheet"  href="css/tabslide.css">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<Header>
+
+<div id = "topPush">
+</div>
+
+
+  
+	  <div id = "Header">
+	  <div class ="ui centered aligned container">
+  <div class="center aligned column">
+<nav class="ui five item menu">
+  <a href="index.html"  class="item">Courses</a>
+  <a href="Timetable.html" class="item">Timetable</a>
+  <a href="Gallery.html" class="item">Gallery</a>
+   <a href="about.html" class="item">About</a>
+  <a href="Register.html" class="item">Register</a>
+ </nav>
+   </div>
+   </div>
+ </div>
+ 
+  </Header>
+  <Main>
+  
+  <div class ="ui grid" id="ghost">
+ <div class = "ui stackable two column row">
+
+ 
+ 
+ <div id="tut1">
+
+ <p>The plugin that is used in this website is a Cursor Animation JQuery plugin,<br> It's a really easy plugin to use and configure. To start the installation of<br> 
+ the plugin we begin by adding JQuery to our website, we do this by <br>typing the source of JQuery website.
+ </p>
+ <img src="images/Picture1.png"  width="500" height="80" >
+ </div>
+ 
+ <div id="tut2">
+ <p>Now that we have Jquery we download the Plugin and put it into our js folder,<br> after that we have to call the Plugin by typing at the bottom<br> of our document
+ the following:
+ 
+ 
+ 
+ </p>
+ <img src="images/Picture2.png"  width="500" height="80" >
+ </div>
+ 
+ 
+ <div id = "tut3">
+
+ <p>Now that we have the Plugin called, we can now add some javascript and use <br>JQuery to target the container we want our changed cursor to be displayed at.<br>
+ The #ghost is the container we are targetting and thats the container where<br> all the content is placed within the website, making the cursor change<br> only in there.
+ </p>
+  <img src="images/Picture3.png"  width="500" height="250" >
+ </div>
+ 
+ 
+ 
+ <div id = "tut4">
+ 
+<p>Lastly, What I did is set the opacity to 0.6 in the JQuery plugin, I did this because<br> the intensity of the color on the cloud effect does not go in pair <br>with the website background.
+I changed lowered the opacity<br> to make it suitable with the website.
+</p>
+   <img src="images/Picture4.png"  width="500" height="270" >
+ </div>
+ 
+ 
+  <div id = "tut5">
+ <p>Before finishing the configuration, I notived the cloud effect blocks the cursor it'self,<br> which makes it very frustrating if the user needs to look at the cursor.<br>
+ So I made the cloud effect move a slight bit to the bottom right,<br> I did this by adding 15px to the positionY and 15px to the positionX.<br> After this the plugin was done and ready.
+</p>
+<img src="images/Picture5.png"  width="800" height="300" >
+
+ 
+ </div>
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ </div>
+ </div>
+  <div id="ghostbox" class="box">Hover over me</div>  
+  <div id="ghostbox2" class="box2">Hover over me</div> 
+  <div id="ghostbox3" class="box3">Hover over me</div>
+ </Main>
+ <Footer>
+ 
+
+ 
+ 
+     <div class="slide-out-div">
+        <a class="handle" href="http://link-for-non-js-users">Content</a>
+        <h3>Information</h3>
+
+        <p>This page contains all the information about the cursor and its plugin installation and configuration.</p>
+    </div>
+	
+ </Footer>
+ 
+ 
+ 
+ 
+ 
+ <script src="js/jquery.lightMouse.js"></script>
+<script src="js/jquery.tabslide.js"></script>
+ 
+ 
+ 
+ 
+ 
+ 	
+
+
+    <script>
+         $(function(){
+             $('.slide-out-div').tabSlideOut({
+                 tabHandle: '.handle',                              //class of the element that will be your tab
+                 pathToTabImage: 'images/info.jpg',          //path to the image for the tab (optionaly can be set using css)
+                 imageHeight: '150px',                               //height of tab image
+                 imageWidth: '80px',                               //width of tab image    
+                 tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
+                 speed: 650,                                        //speed of animation
+                 action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+                 topPos: '200px',                                   //position from the top
+                 fixedPosition: true                           //options: true makes it stick(fixed position) on scroll
+             });
+         });
+		 
+		 
+
+
+         </script>
+		 
+		 
+		 	<script>
+
+	$('#ghost').lightMouse({
+
+	couleur:'#ffff4d'
+
+	});
+	
+		$('#ghostbox').lightMouse({
+
+	couleur:'#00ff00'
+
+	});
+	
+		$('#ghostbox2').lightMouse({
+
+	couleur:'#ff0000'
+
+	});
+	
+			$('#ghostbox3').lightMouse({
+
+	couleur:'#00ffff'
+
+	});
+
+	</script>
+</body>
+
+
+

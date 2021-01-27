@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>Web Assignment</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.css">
+<link rel="stylesheet"  href="css/css.css">
+<link rel="stylesheet"  href="css/cssTimetable.css">
+<link rel="stylesheet"  href="css/tabslide.css">
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+<Header>
+
+
+<div id = "topPush">
+</div>
+
+  
+	  <div id = "Header">
+	  <div class ="ui centered aligned container">
+  <div class="center aligned column">
+<nav class="ui five item menu">
+  <a href="index.html"  class="item">Courses</a>
+  <a href="Timetable.html" class="item">Timetable</a>
+  <a href="Gallery.html" class="item">Gallery</a>
+  <a href="about.html" class="item">About</a>
+  <a href="Register.html" class="item">Register</a>
+ </nav>
+   </div>
+   </div>
+ </div>
+  </Header>
+  <Main>
+  <div id = "ghost" class ="ui grid">
+ <div class = "ui stackable two column row">
+ <div id="mainleft">
+ <div class = " ui column">
+<h2>====== Time =======</h2>
+<hr>
+
+<h3>Monday 12:00 </h3>
+
+<hr>
+
+<h3>Tuesday 15:30 PM</h3>
+
+<hr>
+
+<h3> Wednesday 9:00 AM</h3>
+
+<hr>
+
+<h3>Thursday 16:00</h3>
+
+<hr>
+
+<h3>Friday 10:00</h3>
+
+<hr>
+
+<h3>Saturday 10:00 AM</h3>
+
+<hr>
+
+<h3>Sunday 12:00 PM</h3>
+<hr>
+
+
+ </div>
+ </div>
+ 
+ 
+ 
+ 
+ <div  class = " ui eleven wide column">
+  <div id="mainright">
+  
+ <div id="TableTemplate">   </div>
+ 
+ <script id="TimeTable-json" type="text/x-handlebars-template">
+<table class="ui celled structured table" >
+
+<thead>
+<tr>
+<th class="center aligned">Days</th> <th class="center aligned"> Classes </th> <th class="center aligned">Time </th> <th class="center aligned"> Location</th>
+</tr>
+</thead>
+<tbody>
+{{#each Table}}
+ <tr>
+     <td id = "Days1" class="center aligned"> {{DayOfTheWeek Days}}</td>
+
+      <td id = "ClassesTimeLocation22" class="center aligned">{{SportOfTheWeek Sport}}</td> <td id = "ClassesTimeLocation23" class="center aligned">{{Time}}</td><td id = "ClassesTimeLocation24" class="center aligned">{{Location Location}}</td>
+      
+	   </tr>
+	   {{/each}}
+
+ </table>
+ 
+ 
+</script>
+ 
+ 
+
+
+<button class="ui primary button" id="button">Add You're own Sport and Schedule</button>
+<div class="ui modal TableModal">
+<i class="close icon"></i>
+<div class="headerFORM">
+<h1>Add Schedule</h1>
+</div>
+<hr>
+ <form name = 'Add' id = "Add" class = "ui form" >
+  <div class="inline field">
+<label for = "day" id="LabelTEXT" class="two wide field">Day of the Week </label>
+<input type = "text" class="five wide field"  name="day" id ="day" autofocus  required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?"
+                title="Please enter appropriate day of the week.">
+</div>
+
+<div class="inline field">
+<label for = "firstname" id="LabelTEXT" class="two wide field">Sport</label>
+<input type = "text" name="sport" id="sport" class= "five wide field" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?"
+                title="Please enter your first name (Second name optional) with First Letter capitalised">
+</div>
+
+<div class="inline field">
+<label for = "Time" id="LabelTEXT" class="two wide field">Time</label>
+<input type = "text" name="time" id="time" class="five wide field" required pattern = "^[0-9:]+$"
+                title="Make sure your time contains colon in between the hour and minutes">
+</div>
+
+<div class="inline field">
+<label for = "Location" id="LabelTEXT" class="two wide field">Location</label>
+<input type = "text" name="Location" id="Location" class="five wide field" required pattern = "[A-Z][a-z]+( [A-Z][a-z]+)?" title ="Make sure ">
+</div>
+
+
+<input type="submit" id="add" class="ui primary button" value="Add sport schedule!">
+ </form>
+</div>
+</div>
+ 
+ 
+ 
+ </div>
+ </div>
+</div>
+</div>
+</Main>
+<Footer>
+    <div class="slide-out-div">
+        <a class="handle" href="http://link-for-non-js-users">Content</a>
+        <h3>Information</h3>
+        <p>The following timetable displays the available times for sports and our facility locations. Please get fimiliar with the given times to attend events. </p>
+   
+    </div>
+</Footer>
+
+
+<script src="js/jquery.lightMouse.js"></script>
+<script src="js/jquery.tabslide.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+<script src="js/Template1.js"></script>
+<script  src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.js"></script>
+
+
+    <script>
+         $(function(){
+             $('.slide-out-div').tabSlideOut({
+                 tabHandle: '.handle',                              //class of the element that will be your tab
+                 pathToTabImage: 'images/info.jpg',          //path to the image for the tab (optionaly can be set using css)
+                 imageHeight: '150px',                               //height of tab image
+                 imageWidth: '80px',                               //width of tab image    
+                 tabLocation: 'left',                               //side of screen where tab lives, top, right, bottom, or left
+                 speed: 650,                                        //speed of animation
+                 action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+                 topPos: '200px',                                   //position from the top
+                 fixedPosition: true                           //options: true makes it stick(fixed position) on scroll
+             });
+         });
+		 
+		 
+
+
+         </script>
+<script>
+$("#button").on('click', function(){
+     $('.TableModal').modal('show');
+});
+</script>
+
+
+	<script>
+
+	$('#ghost').lightMouse({
+
+	couleur:'#80ff00'
+
+	});
+
+	</script>
+
+</body>
+
+
+
